@@ -25,6 +25,9 @@
 		DE1B5328186228ED00A6D503 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1B5300186228ED00A6D503 /* UIKit.framework */; };
 		DE1B5330186228ED00A6D503 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE1B532E186228ED00A6D503 /* InfoPlist.strings */; };
 		DE1B5332186228ED00A6D503 /* SpriteKitNinjasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1B5331186228ED00A6D503 /* SpriteKitNinjasTests.m */; };
+		DE1B535518622FC600A6D503 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = DE1B535218622FC600A6D503 /* background-music-aac.caf */; };
+		DE1B535618622FC600A6D503 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = DE1B535318622FC600A6D503 /* pew-pew-lei.caf */; };
+		DE1B535718622FC600A6D503 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DE1B535418622FC600A6D503 /* sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		DE1B532D186228ED00A6D503 /* SpriteKitNinjasTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitNinjasTests-Info.plist"; sourceTree = "<group>"; };
 		DE1B532F186228ED00A6D503 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE1B5331186228ED00A6D503 /* SpriteKitNinjasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitNinjasTests.m; sourceTree = "<group>"; };
+		DE1B535218622FC600A6D503 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		DE1B535318622FC600A6D503 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		DE1B535418622FC600A6D503 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		DE1B52F0186228ED00A6D503 = {
 			isa = PBXGroup;
 			children = (
+				DE1B535118622FC600A6D503 /* Sounds */,
+				DE1B535418622FC600A6D503 /* sprites.atlas */,
 				DE1B5304186228ED00A6D503 /* SpriteKitNinjas */,
 				DE1B532B186228ED00A6D503 /* SpriteKitNinjasTests */,
 				DE1B52FB186228ED00A6D503 /* Frameworks */,
@@ -167,6 +175,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DE1B535118622FC600A6D503 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DE1B535218622FC600A6D503 /* background-music-aac.caf */,
+				DE1B535318622FC600A6D503 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +231,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "USA Hospitality Inc.";
 				TargetAttributes = {
+					DE1B52F8186228ED00A6D503 = {
+						DevelopmentTeam = N9D8Q7S968;
+					};
 					DE1B5323186228ED00A6D503 = {
 						TestTargetID = DE1B52F8186228ED00A6D503;
 					};
@@ -243,8 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1B535618622FC600A6D503 /* pew-pew-lei.caf in Resources */,
 				DE1B531D186228ED00A6D503 /* Spaceship.png in Resources */,
+				DE1B535718622FC600A6D503 /* sprites.atlas in Resources */,
 				DE1B531F186228ED00A6D503 /* Images.xcassets in Resources */,
+				DE1B535518622FC600A6D503 /* background-music-aac.caf in Resources */,
 				DE1B5315186228ED00A6D503 /* Main_iPad.storyboard in Resources */,
 				DE1B5312186228ED00A6D503 /* Main_iPhone.storyboard in Resources */,
 				DE1B5309186228ED00A6D503 /* InfoPlist.strings in Resources */,
@@ -406,11 +429,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpriteKitNinjas/SpriteKitNinjas-Prefix.pch";
 				INFOPLIST_FILE = "SpriteKitNinjas/SpriteKitNinjas-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -420,11 +448,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpriteKitNinjas/SpriteKitNinjas-Prefix.pch";
 				INFOPLIST_FILE = "SpriteKitNinjas/SpriteKitNinjas-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
